@@ -1,0 +1,6 @@
+Thumbs.db
+.DS_Store
+desktop.ini
+*.tmp
+*.log
+.claude/settings.local.json

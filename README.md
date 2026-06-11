@@ -22,7 +22,7 @@
 ## 📁 파일 구조
 
 ```
-daily-roport/
+daily-report/
 ├── README.md
 ├── 2026-06-11.html
 ├── 2026-06-12.html
