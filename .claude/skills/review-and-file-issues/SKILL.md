@@ -117,7 +117,7 @@ Then post with curl (available in Windows 10+):
 curl -s -X POST "https://api.github.com/repos/$repo/issues" `
   -H "Authorization: token $token" `
   -H "Content-Type: application/json" `
-  --data-binary "@C:\Temp\issue_1.json"
+  --data-binary "@$env:TEMP\issue_1.json"
 ```
 
 Or use the Bash tool with a heredoc:
@@ -164,4 +164,4 @@ Present a clean summary:
 - **Python**: may not be available — do not assume it is
 - **GitHub CLI (`gh`)**: may not be installed — use `curl` + `git credential fill` instead
 - **File encoding**: always use the Edit tool for modifying source files; avoid `Set-Content` / `Out-File` with non-ASCII content
-- **Temp files**: use `C:\Temp\` or the system temp path (`$env:TEMP`) for JSON payloads; clean up after use
+- **Temp files**: use `$env:TEMP` for JSON payloads; clean up after use
