@@ -108,7 +108,7 @@ $issue = @{
     body  = "## Problem`n<description>`n`n## Suggested fix`n<suggestion>"
     labels = @("enhancement")
 } | ConvertTo-Json -Depth 3
-[System.IO.File]::WriteAllText("C:\Temp\issue_1.json", $issue, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$env:TEMP\issue_1.json", $issue, [System.Text.Encoding]::UTF8)
 ```
 
 Then post with curl (available in Windows 10+):
@@ -145,13 +145,15 @@ Present a clean summary:
 ## Review complete
 
 ### Bugs fixed (committed & pushed)
-- [2026-06-11.html] 요일 오류: 수 → 목
-- [2026-06-11.html] rel="noopener noreferrer" 추가 (8개 링크)
+- [<filename>] <bug description>
+- [<filename>] <bug description>
 
 ### Issues filed
-- #13 [Enhancement] 자동화 스크립트 파일 추가 필요 — https://github.com/…/issues/13
-- #14 [Enhancement] 인덱스 페이지 추가 — https://github.com/…/issues/14
-- #15 [Enhancement] 다크 모드 지원 — https://github.com/…/issues/15
+- #N  [Enhancement] <title> — https://github.com/<owner>/<repo>/issues/N
+- #N+1 [Enhancement] <title> — https://github.com/<owner>/<repo>/issues/N+1
+
+### No findings
+(If nothing was found, state this clearly rather than omitting the section.)
 ```
 
 ---
